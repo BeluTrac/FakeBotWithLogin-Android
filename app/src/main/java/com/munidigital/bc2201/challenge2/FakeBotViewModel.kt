@@ -32,11 +32,17 @@ class FakeBotViewModel : ViewModel() {
         botMessagesList.add("Definitivamente no")
     }
 
-    fun newMessage ( message_text: String) {
-        val listAux = _messageLiveData.value
-        listAux?.add(Message(newMessageId(),message_text,false))
-        _messageLiveData.value = listAux
-        addMessageBot()
+    fun newMessage ( message_text: String) : Boolean{
+
+        if(!message_text.isEmpty())
+        {
+            val listAux = _messageLiveData.value
+            listAux?.add(Message(newMessageId(), message_text, false))
+            _messageLiveData.value = listAux
+            addMessageBot()
+            return true
+        }
+        return false
     }
 
    private fun newMessageId() : Int{

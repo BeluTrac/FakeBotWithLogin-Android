@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/belen/.gradle/caches/transforms-3/a36bb3c5542d8f0329739f91cc4fbaa6/transformed/material-1.5.0/res/layout/design_bottom_navigation_item.xml" value="0.1109375" />
+        <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/drawable/bob.xml" value="0.1" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/drawable/ic_logout_black_24dp.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/layout/activity_main.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/layout/activity_splash.xml" value="0.10916919959473151" />
@@ -11,6 +14,8 @@
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/layout/item.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/layout/user_item.xml" value="0.1" />
         <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/mipmap-anydpi-v26/fragmento0.xml" value="0.1" />
+        <entry key="..\:/Users/belen/AndroidStudioProjects/challenge2/app/src/main/res/mipmap-anydpi-v26/fragmento0_round.xml" value="0.1" />
       </map>
     </option>
   </component>

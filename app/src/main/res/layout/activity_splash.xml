@@ -7,17 +7,18 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/gif"
+        android:layout_height="300dp"
+        android:layout_width="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
-        android:text="Soy el Splash"
-        android:textStyle="bold"
-        android:textSize="80dp"
+        android:src="@drawable/bob"
+
+
         />
 
     <TextView
@@ -30,6 +31,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:id="@+id/tv_versioname"
+        android:padding="16dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

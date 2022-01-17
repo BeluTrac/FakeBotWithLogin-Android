@@ -2,10 +2,12 @@ package com.munidigital.bc2201.challenge2
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 
@@ -21,8 +23,7 @@ class SplashActivity : AppCompatActivity() {
         var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            // TODO: Deberian comprobar si existe un usuario cargado. Si no existe deberia cargar
-            // la activity de login. Caso contrario la principal del bot
+
             if (loginViewModel.userLogged())
             {
                 startActivity(Intent(this, MainActivity::class.java))
@@ -31,8 +32,10 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, LoginActivity::class.java))
             }
 
-            finish() // Agregar finish para que al volver atras se cierre la app
+            finish()
         }, SPLASH_DURATION)
+
+
 
     }
 

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.munidigital.bc2201.challenge2.databinding.ActivityMainBinding
@@ -43,9 +44,11 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.arrowButton.setOnClickListener{
-            fakeBotViewModel.newMessage(binding.editText.text.toString())
+            if(!fakeBotViewModel.newMessage(binding.editText.text.toString()))
+            {
+             Toast.makeText(this,getString(R.string.You_must_write_a_message),Toast.LENGTH_SHORT).show()
+            }
             binding.editText.setText("")
-
         }
 
         fakeBotViewModel.messageLiveData.observe(this, {
@@ -56,7 +59,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         handleEmptyView()
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

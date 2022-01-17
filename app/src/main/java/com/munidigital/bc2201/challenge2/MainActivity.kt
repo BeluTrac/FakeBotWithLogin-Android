@@ -11,8 +11,8 @@ import com.munidigital.bc2201.challenge2.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-    lateinit var fakeBotViewModel : FakeBotViewModel
-    lateinit var binding : ActivityMainBinding
+    private lateinit var fakeBotViewModel : FakeBotViewModel
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun handleEmptyView()
+    private fun handleEmptyView()
     {
         if (fakeBotViewModel.messageLiveData.value.isNullOrEmpty())
         {

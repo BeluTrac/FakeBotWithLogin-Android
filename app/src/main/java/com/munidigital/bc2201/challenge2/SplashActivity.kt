@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 
 class SplashActivity : AppCompatActivity() {
 
@@ -17,11 +18,19 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         displayAppVersion()
+        var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
             // TODO: Deberian comprobar si existe un usuario cargado. Si no existe deberia cargar
             // la activity de login. Caso contrario la principal del bot
-            startActivity(Intent(this, MainActivity::class.java))
+            if (loginViewModel.userLogged())
+            {
+                startActivity(Intent(this, MainActivity::class.java))
+            }else
+            {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+
             finish() // Agregar finish para que al volver atras se cierre la app
         }, SPLASH_DURATION)
 
@@ -29,11 +38,9 @@ class SplashActivity : AppCompatActivity() {
 
     private fun displayAppVersion() {
         try {
-            // Obtiene el numero de version y lo carga el textview de abajo a la derecha
             val version = this.packageManager.getPackageInfo(this.packageName, 0).versionName
             findViewById<TextView>(R.id.tv_versioname).text = version
         } catch (e: PackageManager.NameNotFoundException) {
-            // Log por si falla
             e.printStackTrace()
         }
     }

@@ -4,6 +4,8 @@ package com.munidigital.bc2201.challenge2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter.submitList(fakeBotViewModel.messageLiveData.value)
 
+            /*
         binding.toolbar.setNavigationIcon(R.drawable.ic_baseline_login_24)
         binding.toolbar.setNavigationOnClickListener {
             val vm = ViewModelProvider(this).get(LoginViewModel::class.java)
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SplashActivity::class.java))
             finish()
         }
-
+*/
 
 
         binding.arrowButton.setOnClickListener{
@@ -54,6 +57,23 @@ class MainActivity : AppCompatActivity() {
 
         handleEmptyView()
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val item_id = item.itemId
+        if(item_id === R.id.main_menu_logout)
+        {
+            val vm = ViewModelProvider(this).get(LoginViewModel::class.java)
+            vm.logout()
+            startActivity(Intent(this, SplashActivity::class.java))
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun handleEmptyView()

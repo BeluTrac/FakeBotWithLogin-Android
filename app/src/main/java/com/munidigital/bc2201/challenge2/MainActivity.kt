@@ -1,6 +1,7 @@
 package com.munidigital.bc2201.challenge2
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,7 +29,13 @@ class MainActivity : AppCompatActivity() {
 
         adapter.submitList(fakeBotViewModel.messageLiveData.value)
 
-
+        binding.toolbar.setNavigationIcon(R.drawable.ic_baseline_login_24)
+        binding.toolbar.setNavigationOnClickListener {
+            val vm = ViewModelProvider(this).get(LoginViewModel::class.java)
+            vm.logout()
+            startActivity(Intent(this, SplashActivity::class.java))
+            finish()
+        }
 
 
 

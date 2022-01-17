@@ -42,9 +42,6 @@ class LoginActivity : AppCompatActivity() {
                 }
                 (!state.loginError && state.user == null) -> { // Usuario sin loguear o recien deslogueado
                     Toast.makeText(this, "Loged out.", Toast.LENGTH_SHORT).show()
-                    etMail.visibility = View.VISIBLE
-                    etPass.visibility = View.VISIBLE
-                    btnLogin.text = "LOGIN"
                 }
                 (state.loginError) -> { // El usuario intentó iniciar sesión y falló
                     Toast.makeText(this, "Invalid user credentials.", Toast.LENGTH_SHORT).show()

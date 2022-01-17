@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">challenge2</string>
+    <string name="write_your_message_here">Escribi tus mensajes aqui</string>
+    <string name="There_are_not_messages">Todavia no hay mensajes</string>
 </resources>

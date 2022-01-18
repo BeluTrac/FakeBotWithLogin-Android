@@ -2,15 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <RelativeLayout
         android:id="@+id/item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="4dp">
+
         <TextView
             android:id="@+id/user_text"
             android:layout_width="wrap_content"
@@ -22,7 +19,6 @@
             android:background="@color/user_message"
             tools:text="Holi"
             />
-
 
         <TextView
             android:id="@+id/bot_text"
@@ -36,8 +32,5 @@
             android:background="@color/bot_message"
             tools:text="Holi"
             />
-
-
-
     </RelativeLayout>
 </layout>

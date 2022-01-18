@@ -16,10 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
-        android:src="@drawable/bob"
-
-
-        />
+        android:src="@drawable/bob"/>
 
     <TextView
         android:layout_height="wrap_content"

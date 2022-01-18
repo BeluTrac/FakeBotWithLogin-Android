@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         displayAppVersion()
-        var loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        val loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
 

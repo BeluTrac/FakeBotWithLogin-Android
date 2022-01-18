@@ -7,32 +7,29 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/et_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Password"
-        android:textSize="20sp"
-        android:padding="16dp"
-        android:inputType="textPassword"
-        android:maxWidth="250dp"
-        />
-
-
-    <EditText
         android:id="@+id/et_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:maxWidth="250dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:layout_above="@+id/et_pass"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:padding="16dp"
+         />
 
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="@string/password"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:inputType="textPassword"
+        android:maxWidth="250dp"
         />
-
 
     <Button
         android:id="@+id/btn_login"
@@ -40,11 +37,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_pass"
         android:layout_centerHorizontal="true"
-        android:text="Login"
+        android:text="@string/login"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         />
-
-
 
 </RelativeLayout>

@@ -1,7 +1,5 @@
 package com.munidigital.bc2201.challenge2
 
-
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.munidigital.bc2201.challenge2.databinding.ItemBinding
-
 
 class FakeBotAdapter: ListAdapter<Message, FakeBotAdapter.MessageViewHolder> (DiffCallback){
 
@@ -36,22 +33,18 @@ class FakeBotAdapter: ListAdapter<Message, FakeBotAdapter.MessageViewHolder> (Di
 
     inner class MessageViewHolder(private val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root){
 
-        fun bind(message: Message){
-
-            if(message.bot)
-            {
+        fun bind(message: Message) {
+            if (message.isBot) {
                 binding.botText.text = message.message
                 binding.botText.visibility = View.VISIBLE
                 binding.userText.visibility = View.GONE
-
-            }else
-            {
+            } else {
                 binding.userText.text = message.message
                 binding.userText.visibility = View.VISIBLE
                 binding.botText.visibility = View.GONE
             }
-            binding.executePendingBindings()
 
+            binding.executePendingBindings()
         }
     }
 }

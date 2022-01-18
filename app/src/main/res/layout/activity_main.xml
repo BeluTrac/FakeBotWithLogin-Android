@@ -5,13 +5,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/editText"
+            android:layout_above="@+id/linearLayout"
             />
 
         <TextView
@@ -25,28 +26,37 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:visibility="gone"
-            android:layout_above="@+id/editText"/>
+            android:layout_above="@+id/linearLayout"/>
 
-        <ImageButton
-            android:id="@+id/arrow_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_baseline_send_24"
-            android:padding="12dp"
-             />
-
-        <EditText
-            android:id="@+id/editText"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
             android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/arrow_button"
-            android:padding="16dp"
-            android:hint="@string/write_your_message_here"
-            android:inputType="text"/>
+            android:orientation="horizontal">
 
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:hint="@string/write_your_message_here"
+                android:inputType="text"
+                android:padding="16dp"
+                android:autofillHints="false" />
+
+            <ImageButton
+                android:id="@+id/arrow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_marginEnd="0dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
     </RelativeLayout>
 </layout>
